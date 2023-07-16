@@ -1,0 +1,9 @@
+.loading {
+  &.not-page {
+    display: flex;
+    width: 20px;
+    img {
+      width: 100%;
+    }
+  }
+}

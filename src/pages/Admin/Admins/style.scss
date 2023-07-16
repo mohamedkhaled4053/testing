@@ -1,0 +1,22 @@
+.admins {
+  direction: ltr;
+  .button {
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: none;
+    background: var(--main-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background: var(--secondary-color-dark);
+    }
+  }
+  .admin-card,
+  .header-card {
+    * {
+      flex: 1;
+    }
+  }
+}

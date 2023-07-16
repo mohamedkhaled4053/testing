@@ -1,0 +1,57 @@
+@import '../../var.scss';
+
+footer {
+  padding: 50px 0;
+  background-color: var(--secondary-bg);
+  border-top: solid 1px;
+  font-weight: bold;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    .links {
+      p {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .icons {
+        font-size: 2rem;
+        display: flex;
+        gap: 20px;
+        a {
+          padding: 10px;
+          display: flex;
+          border-radius: 50%;
+          background-color: var(--main-color);
+          &.facebook {
+            background-color: #4267b2;
+          }
+          &.telegram {
+            background-color: #229ed9;
+          }
+          &.youtube {
+            background-color: red;
+          }
+          &.phone {
+            background-color: var(--light-green);
+          }
+        }
+      }
+    }
+    .phone {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+      .num {
+        font-size: 4rem;
+        color: var(--main-color);
+        @media (max-width: $sm) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

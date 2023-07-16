@@ -1,0 +1,80 @@
+@import '../../../var.scss';
+
+.users,
+.admins {
+  flex-direction: column;
+  gap: 10px;
+  justify-content: unset;
+
+  .filters {
+    width: 90%;
+    form {
+      padding: 10px;
+      border-radius: 10px;
+      background: var(--secondary-color-dark);
+      width: unset;
+      max-width: unset;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      .filter-buttons {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        button {
+          &:hover {
+            background: var(--main-color-dark);
+          }
+        }
+      }
+      & .form-row,
+      .ant-slider {
+        flex: 1;
+      }
+      .ant-slider {
+        min-width: 150px;
+        .ant-slider-rail {
+          background-color: var(--secondary-color);
+        }
+      }
+    }
+  }
+
+  .header-card,
+  .user-card,
+  .admin-card {
+    display: flex;
+    width: 90%;
+    background: var(--main-color-dark);
+    border-radius: 20px;
+    padding: 10px;
+    justify-content: space-between;
+    text-align: center;
+    transition: 0.3s;
+    & * {
+      flex: 0.3;
+    }
+    & .name {
+      flex: 1;
+    }
+    @media (max-width: $md) {
+      & .phone {
+        display: none;
+      }
+      & .name {
+        flex: 0.3;
+      }
+    }
+  }
+  .user-card,
+  .admin-card {
+    &:hover {
+      background: var(--secondary-color-dark);
+    }
+  }
+  .header-card {
+    background-color: var(--secondary-bg);
+  }
+}

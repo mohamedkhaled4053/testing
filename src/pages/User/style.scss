@@ -1,0 +1,39 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: var(--main-color-dark);
+  padding: 20px;
+  border-radius: 20px;
+  min-width: 50%;
+  .user-row {
+    display: flex;
+    justify-content: space-between;
+    &.password {
+      :last-child {
+        background-color: white;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  .user-buttons{
+    display: flex;
+    justify-content: space-around;
+    button {
+      padding: 5px 10px;
+      border-radius: 50px;
+      border: none;
+      background: var(--secondary-bg);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      align-self: center;
+      &:hover {
+        background: var(--main-bg);
+      }
+    }
+  }
+}

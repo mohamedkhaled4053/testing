@@ -1,0 +1,132 @@
+@import '../../var.scss';
+
+.no-access {
+  flex-direction: column;
+  text-align: center;
+  h1 {
+    width: 80%;
+    line-height: 1.5;
+  }
+}
+
+.video-wrapper {
+  background-color: #282c34;
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  .video {
+    position: relative;
+    width: 480px;
+    // height: 270px;
+    // user-select: none;
+    // transform: scale(1.5);
+    direction: ltr;
+    aspect-ratio: 16/9;
+    max-width: 95vw;
+    border-radius: 10px;
+    overflow: hidden;
+    // @media (max-width: $md) {
+    //   transform: scale(1);
+    // }
+
+    dialog {
+      max-width: none;
+      max-height: none;
+      width: 100vw;
+      height: 100vh;
+      background-color: transparent;
+      border: none;
+      color: white;
+      &::backdrop {
+        background-color: transparent;
+      }
+      .overlay {
+        .controls {
+          height: 7%;
+        }
+      }
+    }
+    .overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      &.drive {
+        width: 40px;
+        height: 40px;
+        right: 12px;
+        top: 12px;
+      }
+      .controls {
+        width: 100%;
+        height: 10%;
+        bottom: 0;
+        position: absolute;
+        background-color: #000000cd;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        justify-content: space-around;
+        font-size: 15px;
+        .control {
+          display: flex;
+          align-items: center;
+          &,
+          & * {
+            cursor: pointer;
+          }
+          button {
+            display: flex;
+            border: none;
+            background: transparent;
+            color: white;
+            padding: 0;
+            svg {
+              pointer-events: none;
+              font-size: 25px;
+            }
+          }
+
+          &.track {
+            width: 50%;
+            position: relative;
+            input {
+              width: 100%;
+            }
+            progress {
+              position: absolute;
+              width: 100%;
+              opacity: 0.3;
+              pointer-events: none;
+            }
+          }
+
+          &.rate {
+            .rates {
+              display: flex;
+              position: absolute;
+              align-items: center;
+              bottom: 100%;
+              flex-direction: column;
+              background: #000000cd;
+              transform: translateX(-40%);
+              button {
+                padding: 5px 10px;
+                justify-content: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .exam-link {
+    background-color: green;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}

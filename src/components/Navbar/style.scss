@@ -1,0 +1,82 @@
+@import '../../var.scss';
+
+.navbar {
+  height: var(--nav-height);
+  z-index: 5;
+  position: relative;
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      a {
+        font-size: 1.5em;
+        height: 100%;
+        color: var(--main-color);
+        font-weight: bold;
+        &:hover {
+          color: white;
+        }
+        .logo {
+          width: 50px;
+        }
+        @media (max-width: $md) {
+          font-size: 1em;
+        }
+      }
+    }
+    .auth {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+
+      @media (max-width: $md) {
+        display: none;
+      }
+      a:hover {
+        color: var(--main-color);
+      }
+    }
+    .mobile {
+      @media (min-width: $md) {
+        display: none;
+      }
+      svg {
+        font-size: 1.5em;
+      }
+      .menu {
+        opacity: 0;
+        transition: 0.3s;
+        position: absolute;
+        top: 100%;
+        background: var(--main-color-dark);
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
+        display: flex;
+        gap: 20px;
+        justify-content: space-around;
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+
+        &.show {
+          opacity: 1;
+          height: fit-content;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}

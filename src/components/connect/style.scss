@@ -1,0 +1,55 @@
+@import '../../var.scss';
+
+.connect {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--light-green);
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+  .icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    svg {
+      font-size: 1.5rem;
+    }
+  }
+  &:hover {
+    background-color: var(--main-color);
+  }
+
+  .message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 110%;
+    right: 0;
+    background: var(--main-color-dark);
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    width: 300px;
+    @media (max-width: $sm) {
+      width: 90vw;
+    }
+    .num {
+      font-size: 1.5rem;
+    }
+    &.show {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
