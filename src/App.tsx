@@ -1,31 +1,31 @@
-import { Route, Routes } from 'react-router-dom';
-import {
-  Admin,
-  AdminCourses,
-  AdminVideos,
-  Admins,
-  Courses,
-  Error,
-  Landing,
-  Video,
-  Videos,
-  Login,
-  AdminExams,
-  Register,
-  Users,
-} from './pages';
-import { Navbar } from './components/Navbar/Navbar';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { User } from './pages/User/User';
-import { AdminForm } from './pages/Admin/Admins/AdminForm';
-import { Connect } from './components/connect/Connect';
-import { Footer } from './components/Footer/Footer';
+// import { Route, Routes } from 'react-router-dom';
+// import {
+//   Admin,
+//   AdminCourses,
+//   AdminVideos,
+//   Admins,
+//   Courses,
+//   Error,
+//   Landing,
+//   Video,
+//   Videos,
+//   Login,
+//   AdminExams,
+//   Register,
+//   Users,
+// } from './pages';
+// import { Navbar } from './components/Navbar/Navbar';
+// import { ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+// import { User } from './pages/User/User';
+// import { AdminForm } from './pages/Admin/Admins/AdminForm';
+// import { Connect } from './components/connect/Connect';
+// import { Footer } from './components/Footer/Footer';
 
 export function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
@@ -49,7 +49,8 @@ export function App() {
       </Routes>
       <Connect />
       <Footer />
-      <ToastContainer position="bottom-left" rtl pauseOnFocusLoss={false} />
+      <ToastContainer position="bottom-left" rtl pauseOnFocusLoss={false} /> */}
+      <div>hello</div>
     </>
   );
 }
