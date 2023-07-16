@@ -1,4 +1,4 @@
-import { MdForward10, MdFullscreen, MdReplay10 } from 'react-icons/md';
+import { MdForward10, MdReplay10 } from 'react-icons/md';
 import { AiOutlinePause } from 'react-icons/ai';
 import { BsPlay } from 'react-icons/bs';
 import { Duration } from './Duration';
@@ -7,7 +7,7 @@ import { useVideoContext } from '../../../context/VideoContext';
 const Overlay = () => {
   let {
     playerState,
-    handleClickFullscreen,
+    // handleClickFullscreen,
     handlePlayPause,
     handleSeekChange,
     handleSeekMouseDown,
@@ -82,11 +82,11 @@ const Overlay = () => {
           )}
         </div>
 
-        <div className="full-screen control">
+        {/* <div className="full-screen control">
           <button onClick={handleClickFullscreen}>
             <MdFullscreen />
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

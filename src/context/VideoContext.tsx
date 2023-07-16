@@ -5,11 +5,11 @@ import React, {
   createContext,
   useContext,
 } from 'react';
-import { useEffect } from 'react';
 import { useRef } from 'react';
 import { useState } from 'react';
-import { findDOMNode } from 'react-dom';
-import screenfull from 'screenfull';
+// import { useEffect } from 'react';
+// import { findDOMNode } from 'react-dom';
+// import screenfull from 'screenfull';
 import ReactPlayer from 'react-player';
 import { OnProgressProps } from 'react-player/base';
 
@@ -38,7 +38,7 @@ interface Context {
   handleProgress: (state: OnProgressProps) => void;
   handleEnded: () => void;
   handleDuration: (duration: number) => void;
-  handleClickFullscreen: () => Promise<void>;
+  // handleClickFullscreen: () => Promise<void>;
 }
 
 interface PlayerState {
@@ -138,28 +138,28 @@ export const VideoProvider = ({ children }: Props) => {
     setPlayerState({ ...playerState, duration });
   };
 
-  const handleClickFullscreen = async () => {
-    if (!screenfull.isFullscreen) {
-      screenfull.request(findDOMNode(playerRef.current) as Element);
-    } else {
-      screenfull.exit();
-    }
-  };
+  // const handleClickFullscreen = async () => {
+  //   if (!screenfull.isFullscreen) {
+  //     screenfull.request(findDOMNode(playerRef.current) as Element);
+  //   } else {
+  //     screenfull.exit();
+  //   }
+  // };
 
-  useEffect(() => {
-    const handleChangeFullScreen = () => {
-      if (!dialogRef.current) return;
-      if (screenfull.isFullscreen) {
-        dialogRef.current.showModal();
-      } else {
-        dialogRef.current.close();
-      }
-    };
-    screenfull.on('change', handleChangeFullScreen);
-    return () => {
-      screenfull.off('change', handleChangeFullScreen);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const handleChangeFullScreen = () => {
+  //     if (!dialogRef.current) return;
+  //     if (screenfull.isFullscreen) {
+  //       dialogRef.current.showModal();
+  //     } else {
+  //       dialogRef.current.close();
+  //     }
+  //   };
+  //   screenfull.on('change', handleChangeFullScreen);
+  //   return () => {
+  //     screenfull.off('change', handleChangeFullScreen);
+  //   };
+  // }, []);
   return (
     <VideoContext.Provider
       value={{
@@ -179,7 +179,7 @@ export const VideoProvider = ({ children }: Props) => {
         handleProgress,
         handleEnded,
         handleDuration,
-        handleClickFullscreen,
+        // handleClickFullscreen,
       }}
     >
       {children}
