@@ -5,7 +5,7 @@ import './index.scss';
 import { App } from './App';
 import { AppProvider } from './context/AppContext';
 import { BrowserRouter } from 'react-router-dom';
-// import { SharedPorvider } from './context/SharedContext';
+import { SharedPorvider } from './context/SharedContext';
 // import { VideoProvider } from './context/VideoContext';
 
 const root = ReactDOM.createRoot(
@@ -15,11 +15,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <AppProvider>
-        {/*  <SharedPorvider>
-          <VideoProvider> */}
+          <SharedPorvider>
+        {/*  <VideoProvider> */}
         <App />
-        {/* </VideoProvider>
-        </SharedPorvider>*/}
+        {/* </VideoProvider>*/}
+        </SharedPorvider>
       </AppProvider>
     </BrowserRouter>
   </React.StrictMode>,
